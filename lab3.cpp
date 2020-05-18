@@ -191,6 +191,7 @@ DWORD WINAPI thread_g(LPVOID lpParam) {
 DWORD WINAPI thread_h(LPVOID lpParam) {
 	UNREFERENCED_PARAMETER(lpParam);
 
+	WaitForSingleObject(semaphore_g, INFINITE);
 	WaitForSingleObject(semaphore_f, INFINITE);
 	WaitForSingleObject(semaphore_d, INFINITE);
 	WaitForSingleObject(semaphore_c, INFINITE);
